@@ -38,7 +38,7 @@ getmydata = () => {
          <div>
            <h2>
                 Account Details
-                <Divider/>
+               
            </h2 >
              { this.state.User.map((user) => (
              <div className="profile-user">
