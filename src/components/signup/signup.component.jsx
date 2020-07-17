@@ -56,7 +56,14 @@ handleSubmit = event => {
       }
               
  
-                    
+      signinGoogle = () =>{
+        Axios.get(`http://localhost:8080/user`)
+  .then(response => {
+    console.log(response.data);
+   // this.setState({User: response.data});
+    
+  });
+      }          
     render() {
       
         const { classes } = this.props;
@@ -135,6 +142,9 @@ handleSubmit = event => {
                    Submit
                  </Button>
                  <div/>
+                 <Button variant="contained" color="primary" onClick={this.signinGoogle} >
+                   Sign in with Google
+                 </Button>
                  <a href="/login">Already registered?</a>
             </form>
         );
